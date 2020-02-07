@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftQRCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7yV-Ja-6Nm">
+                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="OYu-eq-eAn"/>
+                                    <constraint firstAttribute="width" secondItem="7yV-Ja-6Nm" secondAttribute="height" multiplier="1:1" id="TIc-c0-hE7"/>
+                                    <constraint firstAttribute="width" constant="300" id="vEN-0U-fra"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UaD-Wc-Ajb">
+                                <rect key="frame" x="37" y="130" width="248" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code Maker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ro5-AJ-aiS">
+                                <rect key="frame" x="127" y="58" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Fp9-la-0uK"/>
+                                    <constraint firstAttribute="width" constant="121" id="ohw-Ut-rMr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nax-XX-jaE">
+                                <rect key="frame" x="37" y="101" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xup-sf-zIx">
+                                <rect key="frame" x="300" y="130" width="51" height="30"/>
+                                <state key="normal" title="MakeIt!"/>
+                                <connections>
+                                    <action selector="tapMakeIt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ar3-eA-60I"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QRCode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lX-wM-CUl">
+                                <rect key="frame" x="37" y="211" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xup-sf-zIx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="0S8-i9-GC3"/>
+                            <constraint firstItem="ro5-AJ-aiS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2pR-rN-bCr"/>
+                            <constraint firstItem="nax-XX-jaE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="81" id="3th-Kz-BK6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xup-sf-zIx" secondAttribute="trailing" constant="24" id="9Wx-qo-MVk"/>
+                            <constraint firstItem="nax-XX-jaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="AKs-O1-lag"/>
+                            <constraint firstItem="7yV-Ja-6Nm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KwS-DA-v1A"/>
+                            <constraint firstItem="7yV-Ja-6Nm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RUc-iR-zuh"/>
+                            <constraint firstItem="UaD-Wc-Ajb" firstAttribute="top" secondItem="nax-XX-jaE" secondAttribute="bottom" constant="8" id="XAm-F9-SJb"/>
+                            <constraint firstItem="UaD-Wc-Ajb" firstAttribute="top" secondItem="ro5-AJ-aiS" secondAttribute="bottom" constant="51" id="c2K-OD-DUN"/>
+                            <constraint firstItem="UaD-Wc-Ajb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="j6C-Qr-ZIW"/>
+                            <constraint firstItem="xup-sf-zIx" firstAttribute="leading" secondItem="UaD-Wc-Ajb" secondAttribute="trailing" constant="15" id="sZd-i3-BkO"/>
+                            <constraint firstItem="ro5-AJ-aiS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="xRX-wF-naw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageQRCODE" destination="7yV-Ja-6Nm" id="W2G-M3-kQQ"/>
+                        <outlet property="txtInputCode" destination="UaD-Wc-Ajb" id="p0w-3T-GHp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="138.0809595202399"/>
+        </scene>
+    </scenes>
+</document>
