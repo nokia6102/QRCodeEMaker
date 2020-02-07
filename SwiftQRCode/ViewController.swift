@@ -24,12 +24,16 @@ class ViewController: UIViewController, UITextFieldDelegate{
     }
 
     @IBAction func tapMakeIt(_ sender: UIButton) {
+  
         imageQRCODE.image = generateQRCode(from: txtInputCode.text ?? "", imageView: imageQRCODE)
-       
          txtInputCode.resignFirstResponder()
         
     }
-    
+   
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        imageQRCODE.image = generateQRCode(from: txtInputCode.text ?? "", imageView: imageQRCODE)
+    }
 }
 
 
